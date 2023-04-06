@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var area ="rectangle";
+        var pi = 3.142, l=5, w=4, r=3;
+
+        // if(area == "circle"){
+        //     console.log("area  of circle is : " + pi*r**2);
+        // }else if(area == "traingle"){
+        //     console.log("area  of traingle is : " + (l*w/2));
+            
+        // }else if(area == "rectangle"){
+        //     console.log("area  of rectangle is : " + (l*w));
+            
+        // }else{
+        //     console.log("please enter valid data")
+        // }
+
+        switch(area){
+            case 'circle':
+                console.table("area of the circle : " + pi*r**2);
+                break;
+            case 'triangle':
+                console.table("area of the triangle : " + (l*w/2));
+                break;
+            case 'rectangle':
+                console.table("area of the rectangle : " + (l*w));
+                break;
+             default:
+                console.table("please correct number ");
+                break;
+        }
+    </script>
+</body>
+</html>

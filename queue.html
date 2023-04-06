@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue in javascript</title>
+    <script>
+        let queue=[];
+        let currentSize=queue.length;
+        let maxSize=5;
+
+        function enqueuewithbtn(){
+            let newVal=document.getElementById("eQl").value;
+            if(currentSize>=maxSize){
+                alert("queue already ");
+            }else{
+
+                queue[currentSize]=newVal;
+                currentSize++;
+            }
+            
+        }
+
+        function display(){
+            console.warn(queue);
+        }
+
+ 
+        function dequeue(){
+            if(currentSize>0){
+
+                for(let i=0;i<queue.length;i++){
+    
+                    queue[i]=queue[i+1]
+    
+                    // console.warn(queue[i]);
+                }
+                currentSize--;
+                queue.length=currentSize;
+            }else{
+                alert("queue is already empty")
+            }
+        }
+
+        function front(){
+            if(currentSize>0){
+                console.warn(queue[0]);
+            }else{
+                 alert("queue is already empty")
+            }
+        }
+
+        function rear(){
+            if(currentSize>0){
+                console.warn(queue[currentSize-1]);
+            }else{
+                 alert("queue is already empty")
+            }
+        }
+
+        function isEmpty(){
+            if(currentSize<=0){
+              return true;
+            }else{
+                return false;
+            }
+       }
+        // enqueue(10);
+        // display();
+
+
+    </script>
+</head>
+<body>
+    <h1>Queue with input element in javascript</h1>
+    <input type="text" placeholder="enter element" id="eQl">
+    <button onclick="enqueuewithbtn()">Add Element</button>
+    <button onclick="dequeue()">Remove Element</button>
+    <button onclick="display()">Display Element</button>
+    <button onclick="front()">Front Element</button>
+    <button onclick="rear()">Rear Element</button>
+</body>
+</html>
